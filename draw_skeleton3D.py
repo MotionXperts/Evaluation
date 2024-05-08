@@ -77,7 +77,6 @@ def extract_x_y_z(bodys):
             first = False
         body_process.append(xyz)
         joint.append(body_process)
-
     return joint
 
 
@@ -88,7 +87,6 @@ def read_file(file_path, file_name, root):
     joints = extract_x_y_z(labeldata['features'])
     draw(joints, len(joints), root)
 
-
 def read_folder(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
@@ -96,6 +94,5 @@ def read_folder(folder_path):
                 file_path = os.path.join(root, file)
                 file_name = os.path.basename(os.path.dirname(file_path))
                 read_file(file_path, file_name, root)
-
 
 read_folder(folder_path)
