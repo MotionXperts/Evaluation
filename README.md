@@ -75,11 +75,11 @@ $ python draw_skeleton2D.py
 ## Implement Detailed
 Originally, there are 22 joints on SMPL format. I map the SMPL format to OpenPose format that Alphapose use. 
 * SMPL format
-![alt text](./Demo/SMPL.png)
+![alt text](https://github.com/MotionXperts/Evaluation/blob/main/Demo/SMPL.png)
 * OpenPose format
-![alt text](./Demo/Openpose.png)
+![alt text](https://github.com/MotionXperts/Evaluation/blob/main/Demo/Openpose.png)
 * Mapping SMPL $\to$ OpenPose
-![alt text](./Demo/Mapformat.png)
+![alt text](https://github.com/MotionXperts/Evaluation/blob/main/Demo/Mapformat.png)
 
  mapping = [-1, 12, 15, -1, -1, 16, 17, 18, 19, 20, 21, 1, 2, 4, 5, 7, 8]
  ```

@@ -138,11 +138,11 @@ for epoch in range(80, 85):
                 if attention_id == 0:
                     COLORMAP = cv2.COLORMAP_SPRING
                 if attention_id == 1:
-                    COLORMAP = cv2.COLORMAP_SUMMER
+                    COLORMAP = cv2.COLORMAP_SPRING
                 if attention_id == 2:
-                    COLORMAP = cv2.COLORMAP_COOL
+                    COLORMAP = cv2.COLORMAP_SPRING
                 if attention_id == 3:
-                    COLORMAP = cv2.COLORMAP_AUTUMN
+                    COLORMAP = cv2.COLORMAP_SPRING
 
                 colornodes = np.array(color_node[frame_index])
                 indexmax = colornodes.argsort()
@@ -163,7 +163,10 @@ for epoch in range(80, 85):
                         (1 - colornodes[mapping[point_id]]) * 255)
                     size = (1 - colornodes[mapping[point_id]]) * 12
                     # color_map = cv2.applyColorMap(np.array([[scaled_value_uint8]]).astype(np.uint8),COLORMAP)
-                    if attention_id == 0 or attention_id == 3:
+
+                    # Setting color weight according by attention id ##################
+                    # Because some color map will be reberse the color weight (ex COLORMAP_SPRING & COLORMAP_AUTUMN) 
+                    if attention_id == 0 or attention_id == 1 or attention_id == 2 or attention_id == 3:
                         color_map = cv2.applyColorMap(
                             np.array([[0 + 127 * size]]).astype(np.uint8), COLORMAP)
                     else:
@@ -200,7 +203,10 @@ for epoch in range(80, 85):
                         int(joints[frame_index][first][1]))
                     pt2 = (int(joints[frame_index][second][0]),
                         int(joints[frame_index][second][1]))
-                    if attention_id == 0 or attention_id == 3:
+
+                    # Setting color weight according by attention id ##################
+                    # Because some color map will be reberse the color weight (ex COLORMAP_SPRING & COLORMAP_AUTUMN) 
+                    if attention_id == 0 or attention_id == 1 or attention_id == 2 or attention_id == 3:
                         scaled_value_uint8 = int((1 - index[0]) * 255)
                     else:
                         scaled_value_uint8 = int((index[0]) * 255)
@@ -224,8 +230,9 @@ for epoch in range(80, 85):
 
             if (frame_index == num_frame):
                 break
-
-        output[0].save(output_path, save_all=True, append_images=output[1:], loop=0, disposal=2)
+        # Take msec as unit, fps is N. Duration means the time of each frame. Thus duration = 1000 / N.
+        fps = 15
+        output[0].save(output_path, save_all=True, append_images=output[1:], loop=0, disposal=2, duration=1000/fps)
         cap.release()
         cv2.destroyAllWindows()
 
