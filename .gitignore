@@ -8,3 +8,4 @@
 /Video*
 config_file
 finetuneAttention*
+.env

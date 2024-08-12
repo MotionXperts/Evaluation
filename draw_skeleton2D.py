@@ -77,7 +77,7 @@ def Top3Node(video_name, attention_node_path, output_path):
     Top3joint = np.argsort(-accumulate_node)[:3]
 
     attention_node_save = {}
-    rank = 0
+    rank = 1
     for joint in Top3joint:
         attention_node_save['rank_'+str(rank)] = SMPL_joints_name[joint]
         rank += 1
