@@ -26,52 +26,45 @@ This `Motion Attention Evaluation` aims to draw the attention matrix and attenti
 
 ColorMap is referenced by `https://docs.opencv.org/4.x/d3/d50/group__imgproc__colormap.html`
 
-## Visualize Attention Matrix on skeletal
+## Visualize Attention Matrix and Attention Node on human skeleton
+![](./Demo/471703066060784233_1_4.png)
 ![alt text](./Demo/467205307287470390_0.gif)
 
 ## Prepare
-### Prepare the alphapose skeleton 
-```python
-dir_path = '/home/$USER/datasets/Loop/clip_Loop_alphapose'
+### Prepare the alphapose skeleton and the video
+```shell
+dir_path : '/home/{$USER}/datasets/Skating_Dataset
 ``` 
 Take `Loop` for example, the directory path should be
 ```
-| - Loop
-    | - clip_Loop_alphapose
-        | - alpha_pose_467205970188828915_0
-            | - vis (directory)
-                | - 0.jpg
-                | - 1.jpg
-                    ...
-            | - 467205970188828915_0.npz
-            | - alphapose-results.json
+- Skating_Dataset
+    - alpha_pose_{$FILENAME}
+        - vis 
+            - 0.jpg
+            - 1.jpg
+                ...
+        - {$FILENAME}.mp4
+        - {$FILENAME}.npz
+        - alphapose-results.json
+    - alpha_pose_{$FILENAME}
+        ...
 ```
-Note : It should only has one json file in the directory level 3
-### Prepare the clip video
-```python 
-video_path_dir = '/home/$USER/datasets/Loop/clip_Loop'
+
+### Prepare the config file 
+```shell 
+# finetune_nodiff_andrew
+attention_node : '{$USER}/MotionExpert/results/finetune_nodiff_andrew/jsons/att_node_results_epoch90.json'
+attention_matrix : '{$USER}/MotionExpert/results/finetune_nodiff_andrew/jsons/att_A_results_epoch90.json'
+epoch_num : 90
+output_dir : '{$USER}/Evaluation/finetuneAttention'
+video_dir : '{$USER}/datasets/Skating_Dataset0811'
+results_epoch : '{$USER}/MotionExpert/results/finetune_nodiff_andrew/jsons/results_epoch90.json'
 ```
-Take `Loop` for example, the directory path should be
-```
-| - Loop
-    | - clip_Loop
-        | - 467205970188828915_0
-            | - 467205970188828915_0.mp4
-            | ...
-```
-### Prepare the attention data
-```python 
-attention_node_path = '/home/$USER/projects/MotionExpert/STAGCN_output_finetune_loop/att_node_results_epoch'
-attention_matrix_path = '/home/$USER/projects/MotionExpert/STAGCN_output_finetune_loop/att_A_results_epoch'
-```
-### Setting which filename that need to be visualized
-```python
-filenames = ["467205977016893491_0",...]
-```
+
 ## Run 
-```
+```shell
 $ conda activate motion2text
-$ python draw_skeleton2D.py 
+$ python draw_skeleton2D.py /home/weihsin/projects/Evaluation/config_file/finetuneAttention.yaml 
 ```
 
 ## Implement Detailed

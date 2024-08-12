@@ -6,3 +6,5 @@
 /Video/attention2.zip
 /Video/*.zip 
 /Video*
+config_file
+finetuneAttention*
