@@ -28,7 +28,7 @@ ColorMap is referenced by `https://docs.opencv.org/4.x/d3/d50/group__imgproc__co
 
 ## Visualize Attention Matrix and Attention Node on human skeleton
 ![](./Demo/471703066060784233_1_4.png)
-![alt text](./Demo/467205307287470390_0.gif)
+![alt text](./Demo/467205989414993988_0.gif)
 
 ## Prepare
 ### Prepare the alphapose skeleton and the video

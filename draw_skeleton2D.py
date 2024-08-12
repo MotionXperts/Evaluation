@@ -49,19 +49,16 @@ def readattention(video_name, num_length, attention_id, attention_node_path, att
     with open(attention_node_path) as f:
         attention_node = json.load(f)
     with open(attention_matrix_path) as f:
-        attention_matrix = json.load(f)
+        matrix_file = json.load(f)
 
     attention_node = np.array(attention_node[video_name])
-    attention_matrix_new = np.array(attention_matrix[video_name][attention_id])
-
+    attention_matrix_new = np.array(matrix_file[video_name][attention_id])
+    attention_node_len = len(attention_node[0])
     color_node = []
     for i in range(0, num_length, 1):
-        if num_length <= 131:
-            index = int(i * (num_length / 131))
-            color_node.append(attention_node[0, index])
-        if num_length > 131:
-            index = int(i * (131 / num_length))
-            color_node.append(attention_node[0, index])
+        index = int(i * (attention_node_len / num_length))
+        color_node.append(attention_node[0, index])
+    
     return color_node, attention_matrix_new
 
 def Top3Node(video_name, attention_node_path, output_path):
