@@ -256,7 +256,15 @@ def read_config(config_path):
     output_dir = config['output_dir']
     video_dir = config['video_dir']
     return attention_node, attention_matrix, epoch_num, output_dir, video_dir
-    
+
+def findfilename(attention_node_path):
+    with open(attention_node_path) as f:
+        attention_node = json.load(f)
+    All_filenames = []
+    for item in attention_node:
+        All_filenames.append(item)
+    return All_filenames
+
 # Use command
 # python draw_skeleton2D.py /home/weihsin/projects/Evaluation/config_file/finetuneAttention.yaml
 if __name__ == "__main__":
@@ -265,6 +273,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     attention_node, attention_matrix, epoch_num, output_dir, video_dir = read_config(args.config_path)
+
+    # When running the error segment setting, it is must to check the file name in the attention_node file
+    All_filenames = findfilename(attention_node)
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -275,7 +286,9 @@ if __name__ == "__main__":
                 file_path = os.path.join(root, file)
                 file_name = os.path.basename(os.path.dirname(file_path))
                 file_name = file_name.split('e_')[1]
-                joints = read_file(file_path)
-                draw(joints, output_dir, file_name, video_dir,attention_node ,attention_matrix)
-                Top3Node(file_name, attention_node, output_dir)
-                Top3Link(file_name, attention_matrix, output_dir)
+                if file_name in All_filenames :
+                    print(file_name)
+                    joints = read_file(file_path)
+                    draw(joints, output_dir, file_name, video_dir,attention_node ,attention_matrix)
+                    Top3Node(file_name, attention_node, output_dir)
+                    Top3Link(file_name, attention_matrix, output_dir)
