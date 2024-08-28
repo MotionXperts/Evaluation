@@ -58,11 +58,23 @@ if __name__ == "__main__":
     with open(label_json) as f:
         data_entries = json.load(f)
 
+    error_segment_not_use = [   '471706304466387043_2',
+                                '471703098860503282_1',
+                                '495776032394576594_1',
+                                '471703104162365684_1',
+                                '495776032394576594_0',
+                                '471706290155159700_1',
+                                '485958841751044210_0',
+                                '471706304466387043_1',
+                                '471706263479386249_1' ]
+
     datas = []
     for entry in data_entries:
         data = {}
         print(entry)
         data['video_name'] = entry
+        if data['video_name'] in error_segment_not_use:
+            continue
         attention_matrix_path = attention_matrix_dir + '/' + data['video_name'] + '_matrix.json'
         matrix = read_matrix(attention_matrix_path)
 

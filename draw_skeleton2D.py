@@ -279,15 +279,30 @@ if __name__ == "__main__":
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
- 
+
+    error_segment_not_use = [   '471706304466387043_2',
+                                '471703098860503282_1',
+                                '495776032394576594_1',
+                                '471703104162365684_1',
+                                '495776032394576594_0',
+                                '471706290155159700_1',
+                                '485958841751044210_0',
+                                '471706304466387043_1',
+                                '471706263479386249_1']
+
     for root, dirs, files in os.walk(video_dir):
         for file in files:
             if file.lower().endswith('.json'):
                 file_path = os.path.join(root, file)
                 file_name = os.path.basename(os.path.dirname(file_path))
                 file_name = file_name.split('e_')[1]
+
                 if file_name in All_filenames :
-                    print(file_name)
+                    if file_name in error_segment_not_use:
+                        print("Skip", file_name)
+                        continue
+                    print("Processing", file_name)
+
                     joints = read_file(file_path)
                     draw(joints, output_dir, file_name, video_dir,attention_node ,attention_matrix)
                     Top3Node(file_name, attention_node, output_dir)
