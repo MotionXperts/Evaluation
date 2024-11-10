@@ -1,0 +1,564 @@
+{
+    "467205989414993988_0": {
+        "GT": "Your body is too low in the air; you should lift your body more before jumping. It is necessary to keep your legs close to your body while in the air.",
+        "CPM": "Ensure your body remains centered and avoid leaning too far forward during the free turn. Keep your shoulders relaxed and maintain a balanced posture.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Focus on keeping your ankles close together while you're in the air for improved stability. ",
+            "worst": " Your jump position is too backward. Close your feet as you jump, your right leg is too high; pull your buttocks in. "
+        },
+        "Vila-U": "The learner should extend their left leg forward before landing in the free turn.",
+        "KendallsTau": 0.9692896323509322
+    },
+    "467205985925333417_0": {
+        "GT": "You should not extend your left leg forward before doing the landing position.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "RGB",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": "Work on aligning your left hand forward and bringing your right foot more in line with your left. "
+        },
+        "KendallsTau": 0.909444121072804
+    },
+    "467205985925333417_1": {
+        "GT": "Same mistake in the second jump: You should not extend your left leg forward before doing the landing position.",
+        "CPM": "Instruction: Keep your body aligned and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Try to keep your body straight while you are in the air. ",
+            "worst": " Work on lengthening the left outside edge so the jump goes forward. Moving your left leg forward will also aid in better balance. "
+        },
+        "Vila-U": "The learner should focus on keeping their body straight and maintaining a balanced position while executing the Lutz.",
+        "KendallsTau": 0.9075506284596895
+    },
+    "485952733385064626_0": {
+        "GT": "Your jump is very high, which is good, but your left leg needs to go down to the right ankle in the air position.",
+        "CPM": "Instruction: Focus on maintaining a balanced posture and avoid leaning too far forward during the free turn to ensure smooth execution.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Focus on keeping your ankles close together while you're in the air. ",
+            "worst": " Focus on keeping your body straight while in the air for improved stability. "
+        },
+        "Vila-U": "The learner should focus on keeping their body straight and not leaning forward too much during the landing position.",
+        "KendallsTau": 0.9649625111759926
+    },
+    "495775905407828051_0": {
+        "GT": "First jump looks good.",
+        "CPM": "Instruction: Keep your body more centered and avoid leaning too far forward during free skate.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Work on aligning your left ankle with your right ankle and holding your legs tightly together during the jump. ",
+            "worst": " Try to keep your body straight while in the air to avoid leaning forward during the jump. "
+        },
+        "Vila-U": "Instruction: When you are doing the free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.8417454952641034
+    },
+    "485952685250445858_0": {
+        "GT": "When you do takeoff, your body cannot go so much backward. Before take off your outside backward edge should be much deeper and longer. Air position have some problem your body not really straight and your left leg too high. You need to put your left ankle down to the right ankle.",
+        "CPM": "Instruction: Focus on maintaining a straight back and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Focus on keeping your left shoulder more controlled for a better second jump. ",
+            "worst": " Your jump position is too backward. Close your feet as you jump, your right leg is too high; pull your buttocks in. "
+        },
+        "Vila-U": "To improve the single Axel, the learner should extend their right leg forward before doing the landing position.",
+        "KendallsTau": 0.9265561435371431
+    },
+    "495776057106891191_0": {
+        "GT": "Body can be more straight on Aira position: You need to make sure that your body weight under your right toe pick. You can close Ankles tightly on air position. Overall good.",
+        "CPM": "Instruction: Keep your body centered and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " You need to open your left shoulder faster and directly back. "
+        },
+        "Vila-U": "The learner should extend their left leg forward before landing.",
+        "KendallsTau": 0.9382757445018391
+    },
+    "485952546285027444_0": {
+        "GT": "When you do free turn, make sure your butt doesn\u2019t put out and also your body too much forward.",
+        "CPM": "Instruction: Focus on maintaining a balanced posture during the free turn to avoid leaning too far forward or letting your butt protrude.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "No_diff",
+            "best": " Try to keep your body straight while you are in the air. ",
+            "worst": " Focus on straightening your leg backward during the landing to prevent over-rotating. "
+        },
+        "Vila-U": "Instruction: When you do free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.9723040786848911
+    },
+    "467206024831435067_0": {
+        "GT": "Stretch your body and legs in the jump, do not lower your body in the air.",
+        "CPM": "Instruction: Focus on maintaining a balanced and centered posture during the free turn to ensure smooth execution.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Try to keep your body straight and position your left ankle near your right ankle while in the air. ",
+            "worst": " Work on keeping your left shoulder steady to improve the technique of your second jump. "
+        },
+        "Vila-U": "Instruction: When you do the single Axel, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.9465500462602984
+    },
+    "467206000638951883_0": {
+        "GT": "Good.",
+        "CPM": "You should keep your body more centered and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "RGB",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " Work on keeping your left shoulder steady to improve the technique of your second jump. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before doing the landing position.",
+        "KendallsTau": 0.9354145193227772
+    },
+    "471706009942622389_0": {
+        "GT": "You need to fully transfer your body weight to your right leg. You need to put your left leg down in an air position.",
+        "CPM": "Instruction: Focus on maintaining a balanced posture with your body slightly leaned back during the free turn to avoid leaning too far forward and losing control.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Focus on a structured body posture in the air by binding your arms to your body and legs and launching upward. Make sure to elevate your body subsequent to the jump. ",
+            "worst": " Try to keep your left leg closer to your right foot and raise your left knee higher to generate more power for a higher jump, as your jumps are not fully rotating currently. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing the free turn.",
+        "KendallsTau": 0.9515567689139733
+    },
+    "471703098860503282_0": {
+        "GT": "When you initiate the toe loop jump, you hesitate at the moment of the jump: your right leg should smoothly rise without pausing in front of the left leg. Your toe loop lacks sufficient rotation. I'd recommend avoiding excessive circular motion, aim for a more linear jump but still maintaining on the edges. There are some issues with your landing.",
+        "CPM": "Instruction: Keep your body upright and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Your jump technique is closer to an Axel than a toe loop. ",
+            "worst": " Focus on a gentle bend in your arms and legs while swinging for the Axel and keep your right knee elevated. Remember to keep your circle limited when launching into the Axel and ensure your "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9653314910754695
+    },
+    "471703098860503282_1": {
+        "GT": "When you do Axel, you can transfer your body faster to the right side.",
+        "CPM": "Instruction: You should keep your arms close to your body during the free turn and maintain a balanced posture.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "RGB",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " Your jump position appears to be more leaned backwards than it should be. Make sure to draw your feet close together as you take a jump and keep an eye on your right leg not going too high. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing the spin.",
+        "KendallsTau": 0.9555415739783678
+    },
+    "471703066060784233_0": {
+        "GT": "Bend your arms on the swing for the jump, work your right knee up at the moment of the swing.",
+        "CPM": "Instruction: Keep your torso aligned and avoid leaning too far forward during free skate movements.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Bend your arms and right leg on the swing. Bend your arms on the swing for the jump, work your right knee up at the moment of the swing. ",
+            "worst": " Try to deepen the bend in your right knee during the backswing stage a bit more. "
+        },
+        "Vila-U": "Instruction: When you do free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.9766605958622405
+    },
+    "471706263479386249_0": {
+        "GT": "In the last two jumps, you try to make a toe loop, but it looks like Axel's jump, because you turned your body over and turn your right sock before the jump.",
+        "CPM": "Instruction: Keep your center of gravity low and maintain a balanced posture while performing the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Your last jump seemed more like an Axel than a toe loop since you turn your body and right toe pick too soon. ",
+            "worst": " Axel + Axel jump (1A+1A). Both jumps have the same drawbacks: the right leg should be lowered in the air, the arms and body should be stretched out and "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9561707843182485
+    },
+    "471706263479386249_1": {
+        "GT": "Bend your arms and right leg at the moment of the swing so that the jump goes up. Don't lift your left leg up so much in the air.",
+        "CPM": "Instruction: Work on maintaining a lower center of gravity during free skating to improve balance and control.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " In your second jump, work towards a toe loop rather than an Axel. Keep in mind not to rotate your right hip and toe when your right leg is yet to lift off. It's ",
+            "worst": " Axel jump should be higher: lift your right knee higher in the moment of swing. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before performing the landing position.",
+        "KendallsTau": 0.9726964437232493
+    },
+    "471706290155159700_0": {
+        "GT": "Bend your arms and your right leg on the swing.",
+        "CPM": "Instruction: Make sure your knees are bent and maintain a low center of gravity during the spin to achieve better balance and control.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Bend your arms and right leg on the swing. Bend your arms on the swing for the jump, work your right knee up at the moment of the swing. In the air, lower your right leg down and control the body ",
+            "worst": " Focus on keeping your body straight before takeoff, avoiding any backward motion or circular motion. "
+        },
+        "Vila-U": "Instruction: When you are doing the single Axel, make sure your left leg is extended straight forward and your body is slightly forward.",
+        "KendallsTau": 0.9607399234267462
+    },
+    "471706290155159700_1": {
+        "GT": "Your condition in the air is too relaxed, lower your right leg down and press your hands to the body.",
+        "CPM": "Instruction: Work on maintaining a more upright posture during the free skate to improve balance and control.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Axel jump should be higher: lift your right knee higher in the moment of swing. ",
+            "worst": " I recommend bending your right leg more at the knee - on the backswing. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing in the free turn.",
+        "KendallsTau": 0.9477644679868049
+    },
+    "471706304466387043_0": {
+        "GT": "Bend your arms and right leg on the swing. Axel jump should be go more up: use your right knee up on the swing move.",
+        "CPM": "Instruction: Keep your arms balanced and aligned with your body to maintain proper posture during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " You're doing well on the Axel move. ",
+            "worst": " Axel jump should be higher: lift your right knee higher in the moment of swing. "
+        },
+        "Vila-U": "Instruction: When you do a single Axel, make sure your legs are bent at the knees, and your body is slightly forward.",
+        "KendallsTau": 0.9682875164914595
+    },
+    "471706304466387043_1": {
+        "GT": "It's not a toe loop jump because you over turn your body and toe pick before the jump.",
+        "CPM": "Instruction: Ensure that your upper body remains aligned and avoid excessive forward lean during the free turn.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " When you do takeoff your right leg should pass your left leg and switch outside to the direction of the jump. You start to stretch yourself too early, so that's why you cannot jump high. Make sure that ",
+            "worst": " Axel + Axel jump (1A+1A). Both jumps have the same drawbacks: the right leg should be lowered in the air, the arms and body should be stretched out and "
+        },
+        "Vila-U": "The learner should extend their left leg forward before performing the landing position.",
+        "KendallsTau": 0.9389965185867184
+    },
+    "471706304466387043_2": {
+        "GT": "Why is your right leg moving strangely during the swing when you do the Salchow? Control your right leg, it doesn't need to swing from side to side.",
+        "CPM": "Instruction: Ensure your body is more vertical during the free turn to maintain better balance and control.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Axel jump should be higher: lift your right knee higher in the moment of swing. ",
+            "worst": " Work on keeping your body firm in mid-air by pressing your arms to your side and keeping your legs together; it also helps to stretch out your body. "
+        },
+        "Vila-U": "Instruction: When you do free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.9614748555005084
+    },
+    "468398494953242881_0": {
+        "GT": "Don't stick your hips back out. Other things are good.",
+        "CPM": "Instruction: Focus on maintaining a straight back and centered body position during the spin to achieve better control and balance.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " You're making progress, though there's room for improvement. "
+        },
+        "Vila-U": "Instruction: When you do a single axel, make sure you keep your right leg straight.",
+        "KendallsTau": 0.9714647584789057
+    },
+    "471703083593236980_0": {
+        "GT": "Double Axel attempt. You need to swing your right foot up and push up with your left foot in the moment of jump. Lack of height and rotation speed, as well as too relaxed position in the air do not allow you to perform this element well.",
+        "CPM": "Instruction: Keep your body more upright and ensure that you maintain a balanced posture during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Axel jump should be higher: lift your right knee higher in the moment of swing. ",
+            "worst": " You're doing well on the Axel move. "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9790094377266781
+    },
+    "495779172569055492_0": {
+        "GT": "The outward arc (edge) is too short, roll into the jump and your legs may bend your knees.",
+        "CPM": "Ensure your body remains centered and avoid leaning too far forward during the free turn to maintain balance and control.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "RGB",
+            "best": " Work on making your takeoff less rushed and keeping your left outside edge steady. It will lead to a better rotation in your jump. ",
+            "worst": " Try to keep your left hand forward and bring your right foot in closer alignment with your left for a better jump approach. "
+        },
+        "Vila-U": "Instruction: You should extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9508036021552786
+    },
+    "471703087418179585_0": {
+        "GT": "Attempt 2A. The right leg at the moment of the swing should not go so forward, the knee of the right leg should work upwards. The jump does not have enough height, so you need to improve speed and pull yourself up with the help of your left leg and the swing of your right knee and the strength of your right (if possible left) hands. Position on air should be more close and strong.",
+        "CPM": "You should focus on maintaining a balanced posture and avoid leaning too far forward during the free turn. Keep your shoulders aligned with your hips to ensure smooth rotation and control throughout the movement.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Axel jump should be higher: lift your right knee higher in the moment of swing. ",
+            "worst": " You're doing well, it's okay. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing the spin.",
+        "KendallsTau": 0.9621622389895078
+    },
+    "479777184677101621_0": {
+        "GT": "It will be better if your hands work from the bottom up at the approach at the moment of repulsion.",
+        "CPM": "Instruction: You should focus on maintaining a balanced and controlled posture throughout the free skate, avoiding excessive forward lean or extended arms.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "RGB",
+            "best": " Work on extending your initial glide (arc) before the jump to help gather more energy. ",
+            "worst": " Try to keep your body straight while you are in the air. "
+        },
+        "Vila-U": "Instruction: When you do a free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.9503851406782505
+    },
+    "485956824340889665_0": {
+        "GT": "This jump's not too bad, but you need to coordinate your shoulders and hips. Make sure that you turn your right side together with your left side. Also, try not to drop your left shoulder in the air. Your takeoff needs to pass your left leg fully in the direction of the jump when switching.",
+        "CPM": "Instruction: Focus on keeping your body upright and maintain a balanced posture during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Focus on keeping your body straight while in the air for improved stability. ",
+            "worst": " Bend your arms on the swing for the jump, work your right knee up at the moment of the swing. In the air, lower your right leg down and control the body do not fill it up to the left. Hand "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.8639181272732157
+    },
+    "485956903277691217_0": {
+        "GT": "You need to take more speed before jump.",
+        "CPM": "Instruction: Focus on maintaining a balanced and centered posture during your free turns to avoid leaning too far forward or extending your butt outward.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " Let's see how we can enhance your performance. "
+        },
+        "Vila-U": "The learner should focus on their balance and maintaining their center of gravity while performing the single Axel.",
+        "KendallsTau": 0.7070107274860911
+    },
+    "485956903277691217_1": {
+        "GT": "Coordinate your hips and shoulders together when you do takeoff. Make sure that you turn your body to the direction of the jump. And switch your left knee higher to help yourself jump up. Don\u2019t forget to use more power.",
+        "CPM": "Instruction: Keep your body centered and maintain a straight posture during the free turn to avoid leaning too far forward or backward.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Your takeoff has some problems your left knee should up when you do take off, also, your right leg should pass your left leg before you do takeoff. And your body position it\u2019s not good so why you ",
+            "worst": " Focus on aligning your hips and shoulders together when you take off to improve your jump. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing in the free turn position.",
+        "KendallsTau": 0.9240944583128473
+    },
+    "485958828110905364_0": {
+        "GT": "You should control your body position in the air. Make sure to set your body straight up, but now your body is going too much backward.",
+        "CPM": "Instruction: You should focus on maintaining a straight torso and avoid leaning too much forward during your free turn to ensure better balance and flow.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Try to keep your body straight while in the air to avoid falling forward when you land. ",
+            "worst": " Axel jump should be higher: lift your right knee higher in the moment of swing. "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9404636460384469
+    },
+    "468961490423775240_0": {
+        "GT": "When you go to the air position, make sure that your left leg goes down to your right ankle and close yourself faster. Also, make sure that the weight of your body is on the right leg.",
+        "CPM": "Instruction: Ensure that your arms are in a position to create balance and grace during the free turn, rather than extending them out too far.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "No_diff",
+            "best": " Focus on maintaining an upright position upon landing and ensure your left side stays in control without over-rotating. ",
+            "worst": " Remember to stay upright in your landing and position your left leg to open directly back. "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.9015102739285248
+    },
+    "485956942436237491_0": {
+        "GT": "Problem of this jump, you\u2019re switching your left leg and jumping in the same time. Try to switch your left leg first and then you jump up. Please control your hand when you do takeoff, your hand is getting over your head. It\u2019s not really good.",
+        "CPM": "Instruction: You should maintain a balanced posture with your shoulders aligned and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Try to bring your left leg closer to your right foot and raise your left knee higher to increase the power for a higher jump since your jumps aren't fully rotating yet. ",
+            "worst": " You still need to be careful with your takeoff in this video. I don\u2019t really like how your hands are working - please bend your hands and make sure to use your hands as a circle around yourself. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before doing the landing position.",
+        "KendallsTau": 0.8013789652728794
+    },
+    "485956878548074535_0": {
+        "GT": "When need to takeoff you need to put the weight of your body to the right leg fully. Make sure that your hands Don\u2019t up too much. When you do takeoff, you need to pass your left leg over your right leg and switch it up to the direction of the jump.",
+        "CPM": "Instruction: Keep your body centered and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Work on making your takeoff less rushed and keeping your left outside edge steady. It will lead to a better rotation in your jump. ",
+            "worst": " Try to extend the left outside edge more to ensure the jump moves forward. Also, bringing your left leg more forward will help with balance. "
+        },
+        "Vila-U": "Instruction: You should extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.8304983222814896
+    },
+    "485956878548074535_1": {
+        "GT": "Use your toe pick with more power; it\u2019s gonna help you to jump higher.",
+        "CPM": "Instruction: Ensure that your arms are properly positioned and extended during the free turn to maintain balance and flow.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Try to extend the left outside edge more to ensure the jump moves forward. Also, bringing your left leg more forward will help with balance. ",
+            "worst": " Try to keep your left hand forward and bring your right foot in closer alignment with your left for a better jump approach. "
+        },
+        "Vila-U": "Instruction: You should not extend your left leg forward before doing the landing position.",
+        "KendallsTau": 0.8304983222814896
+    },
+    "485956909619216682_0": {
+        "GT": "You are disordinate when you do takeoff you need to make sure that you switch your left side to the direction of the jump, turning your body and then you jumping up make sure that you have a temple when you have a jump.",
+        "CPM": "Instruction: Keep your upper body upright and maintain a balanced posture during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Focus on waiting a moment longer before jumping to allow your right side to turn. ",
+            "worst": " Try to keep your left hand forward and bring your right foot in closer alignment with your left for a better jump approach. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing.",
+        "KendallsTau": 0.7895190443893858
+    },
+    "485958794455810145_0": {
+        "GT": "You should take more speed.",
+        "CPM": "You should keep your body upright and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Try to glide your left leg on the inside edge towards your right foot instead of lifting it too early. ",
+            "worst": " Focus on keeping your body straight during the landing, and make sure to lift and stretch your hands and left leg. "
+        },
+        "Vila-U": "Instruction: When you do free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.8689523025519711
+    },
+    "485958794455810145_1": {
+        "GT": "Pass your left leg on the ice until right foot and then lift your left knee with more power. Don't drop your toe pick.",
+        "CPM": "Instruction: Ensure your body is balanced and avoid overreaching with your arms during the free skate. Keep your shoulders aligned, and maintain a steady flow throughout your performance.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Work on aligning your hips and shoulders while turning them more before jumping. Aim to raise your left knee higher during the takeoff. ",
+            "worst": " Try to keep your body straight while in the air to avoid falling forward when you land. "
+        },
+        "Vila-U": "Instruction: When you do a single Axel, you should keep your left leg forward.",
+        "KendallsTau": 0.8442678840025074
+    },
+    "485956876367036449_0": {
+        "GT": "Take speed before takeoff and take power when you\u2019re jumping; your jump looks so relaxed. Please pass your left leg over your right leg and switch it outside to help yourself jump higher in the moment of takeoff.",
+        "CPM": "Instruction: Ensure a smooth transition between spins and avoid excessive leaning forward.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "No_diff",
+            "best": " Focus on waiting a moment longer before jumping to allow your right side to turn. ",
+            "worst": " Practice keeping your body straight and balanced to prevent leaning into the circle. "
+        },
+        "Vila-U": "The learner should extend their left leg forward before landing.",
+        "KendallsTau": 0.7592890860157003
+    },
+    "485956893093920833_0": {
+        "GT": "You don\u2019t turn your right side to the direction of the jump, and your left side is blocking you from jumping in the right direction. Also, when you take off, you need to make sure that your right leg doesn\u2019t go over your left leg and your left leg passes your right leg and goes outside to help you jump higher. I don\u2019t like your air position; your legs should be together and closed, and your left knee should turn outside and close your ankles and also stretch your body fully up. Make sure your right side faces the jump direction and your left side doesn't obstruct you.",
+        "CPM": "Instruction: Keep your body upright and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Work on lengthening your backward outside edge prior to takeoff and ensure your hips are centered. Keep your left shoulder rotation in check for a more fluid and unified motion. ",
+            "worst": " Try to keep your left hand forward and bring your right foot in closer alignment with your left for a better jump approach. "
+        },
+        "Vila-U": "Instruction: When you do a single axel, make sure your legs are in a proper position.",
+        "KendallsTau": 0.8901981971385244
+    },
+    "485956866787246619_0": {
+        "GT": "After you do takeoff, you need to straighten your body to create faster speed, but your position in the air is very loose. When you do takeoff, you need to use more power and turn your shoulders and hips faster.",
+        "CPM": "Instruction: Ensure your body remains balanced and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "No_diff",
+            "best": " Your takeoff has some problems your left knee should up when you do take off, also, your right leg should pass your left leg before you do takeoff. And your body position it\u2019s not good so why you ",
+            "worst": " Practice holding your body straighter and lifting it higher while bringing your legs together in the Aira position. "
+        },
+        "Vila-U": "The learner should extend their left leg forward before landing to avoid putting out their butt and too much forward body position.",
+        "KendallsTau": 0.9187857345142626
+    },
+    "485956897489551409_0": {
+        "GT": "This jump you didn\u2019t take any power. When you do takeoff, make sure that you don\u2019t drop your left side down. You need to fully turn to the direction of the jump and switch your left knee up. It\u2019s going to help you go to the right direction.",
+        "CPM": "Instruction: Focus on maintaining a straight posture during the free turn to avoid leaning too far forward or letting your butt stick out.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Your takeoff has some problems your left hand should be holding. Try to turn your left side outside before you jump to improve your spin. Also, try to use your right hand more powerfully and move it in a ",
+            "worst": " Focus on switching your left leg outside before jumping to maintain the jump's flow. Additionally, make a circle with your right hand and bend it correctly during takeoff. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before landing in the free turn.",
+        "KendallsTau": 0.9184240179156388
+    },
+    "485958835224182962_0": {
+        "GT": "When you jump your body should be clearly over your right toe, but your body has gone back, this makes the jump more difficult, and you should also lower your left leg down during Air position.",
+        "CPM": "Instruction: Keep your body centered and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Try to bring your left leg closer to your right foot and raise your left knee higher to increase the power for a higher jump, as you are currently not fully rotating. ",
+            "worst": " Try to keep your body straight while you are in the air. "
+        },
+        "Vila-U": "The learner should focus on maintaining a proper body position while performing the single Axel, with the legs bent at the knees and the feet together.",
+        "KendallsTau": 0.8723582100933158
+    },
+    "479777901231997329_0": {
+        "GT": "First jump is good, you can just try to improve your hand work: Don\u2019t raise them so much during takeoff.",
+        "CPM": "Instruction: You should focus on maintaining a more upright posture and ensure your arms are properly positioned to create better balance and flow during the spin.",
+        "CoachMe": {
+            "best_model": "No_diff",
+            "worst_model": "Skeleton",
+            "best": " Remember to stay upright in your landing and position your left leg to open directly back. ",
+            "worst": " Consider tightening the proximity of your feet during the airborne phase of the jump for better control. "
+        },
+        "Vila-U": "The learner should not extend their left leg forward before performing the landing position.",
+        "KendallsTau": 0.9107633431499733
+    },
+    "479777901231997329_1": {
+        "GT": "Second jump toe loop: Don\u2019t open your left shoulders first and then use your right. Make sure that you use them together then it\u2019s not gonna count as Axel Because you pre turn too much.",
+        "CPM": "Instruction: You should focus on maintaining a balanced posture and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "Skeleton",
+            "best": " Your left side is blocking your movement during the jump\u2014it's not really a toe loop. Try to open your left shoulder and hip as you take off. Make sure that you turn your body and hips ",
+            "worst": "Try to raise your right knee higher when you are in the swing of an Axel jump. "
+        },
+        "Vila-U": "Instruction: When you do the single Axel, make sure your body is straight and your left leg is forward.",
+        "KendallsTau": 0.9575878428232599
+    },
+    "485958767041839121_0": {
+        "GT": "Turn your hips and shoulders at the same time in the direction of the jump. You need to make a bigger circle with your right hand when you try to get into the air position; this will help you make more turns. Pass your left leg longer until your right leg and lift your knee during takeoff; it will help you jump higher.",
+        "CPM": "Instruction: Keep your body more upright and avoid leaning too far forward during the free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "No_diff",
+            "best": " Try to keep your left hand forward and bring your right foot in closer alignment with your left for a better jump approach. ",
+            "worst": " Try to keep your body straight while in the air to avoid falling forward when you land. "
+        },
+        "Vila-U": "Instruction: When you do free turn, make sure your butt doesn't put out and also your body too much forward.",
+        "KendallsTau": 0.8070271384756516
+    },
+    "485956826287046865_0": {
+        "GT": "The way you use your hands when you do takeoff is very weird: You\u2019re not allowed to pre-turn your left shoulder and then use your right shoulder; you should use them together at the same time. Make sure you jump up when you do takeoff. You need to fully straighten yourself in the air position, close your hands tightly, and straighten your body up.",
+        "CPM": "You should work on maintaining a straight back and not leaning too far forward during your free turn.",
+        "CoachMe": {
+            "best_model": "RGB",
+            "worst_model": "No_diff",
+            "best": " Try to keep your body muscles firm throughout the jump. ",
+            "worst": " Work on maintaining a straight body line and a downward left leg position in the air. "
+        },
+        "Vila-U": "The learner should extend their left leg forward before doing the landing position.",
+        "KendallsTau": 0.8321794946948861
+    },
+    "485956965722489145_0": {
+        "GT": "Here\u2019s a big mistake. You step your right leg too much behind your left leg. It\u2019s very hard to do the takeoff like this. Make sure that your left side doesn\u2019t lift so much because you can destroy your jump, and make sure that your right side is doing a circle around your body when you\u2019re doing the takeoff. Also, use power when you jump up, which is why you don\u2019t have enough height to rotate your jump.",
+        "CPM": "Instruction: Ensure your body is centered and maintain a straight back during the spin to achieve better balance and control.",
+        "CoachMe": {
+            "best_model": "Skeleton",
+            "worst_model": "RGB",
+            "best": " Practice lengthening the edge that arcs outward forward. ",
+            "worst": " Try to keep your body straight while you are in the air. "
+        },
+        "Vila-U": "The learner should focus on maintaining their balance and not extending their leg forward while doing the landing position.",
+        "KendallsTau": 0.8630953671861187
+    }
+}

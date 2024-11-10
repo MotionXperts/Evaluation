@@ -8,8 +8,11 @@
 /Video*
 config_file
 finetuneAttention*
+finetuneBoxing
 .env
 package*
-golden_filename
+golden_filename*
 vis_package.zip
 tmpErrorFile
+Boxing_test.zip
+utils/*.png
