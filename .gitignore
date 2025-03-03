@@ -8,7 +8,7 @@
 /Video*
 config_file
 finetuneAttention*
-finetuneBoxing
+finetuneBoxing*
 .env
 package*
 golden_filename*
@@ -16,3 +16,10 @@ vis_package.zip
 tmpErrorFile
 Boxing_test.zip
 utils/*.png
+*pkl
+Boxing_cam_skeleton
+finetune_skeleton
+saved_frames
+*__pycache__
+*.png
+*GT.json

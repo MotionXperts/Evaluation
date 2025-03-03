@@ -9,7 +9,6 @@ import numpy as np
 folder_path = '/home/weihsin/datasets/Axel/HybrIK'
 matplotlib.use('Agg')
 
-
 def draw(joints, num_frame, root):
     fig = plt.figure(figsize=(10, 10))
     ax = plt.subplot(projection='3d')

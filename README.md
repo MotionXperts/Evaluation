@@ -103,3 +103,13 @@ Originally, there are 22 joints on SMPL format. I map the SMPL format to OpenPos
  21 : right-wrist
  ```
  OpenPose format is reference from `https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md` 
+
+## visualize package
+**471703066060784233_1**
+```bash
+/home/c1l1mo/projects/VideoAlignment/result/Axel_merged_one_jump_128/Axel_test_True.pkl
+```
+**485958794455810145_1**
+```bash
+/home/c1l1mo/projects/VideoAlignment/result/Lutz_two_jumps_128/Lutz_test_True_4859.pkl
+```
