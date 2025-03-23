@@ -18,6 +18,7 @@ Boxing_test.zip
 utils/*.png
 *pkl
 Boxing_cam_skeleton
+Boxing_camera_visualize
 finetune_skeleton
 saved_frames
 *__pycache__

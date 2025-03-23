@@ -59,7 +59,10 @@ def normal_draw(joints_cam, file_name):
             ax.set_xlabel('x axis')
             ax.set_zlabel('y axis')
             ax.set_ylabel('z axis')
-    
+            ax.set_xlim(-0.4, 0.4)
+            ax.set_ylim(-0.4, 0.4)
+            ax.set_zlim(-0.4, 0.4)
+            # ax.view_init(elev=0,azim=90)
             skeleton_bone = [[15,12],[12,9],[9,6],[6,3],[3,0]]
             skeleton_left_leg = [[0,1],[1,4],[4,7],[7,10]]
             skeleton_right_leg = [[0,2],[2,5],[5,8],[8,11]]
@@ -109,7 +112,7 @@ def normal_draw(joints_cam, file_name):
 
     ani = animation.FuncAnimation(fig, animate, frames=num_frame_min, repeat=True)
     gif = file_name + '.gif' 
-    gif_dir = "./Boxing_cam_skeleton"
+    gif_dir = "./Boxing_camera_visualize"
     gif_path = os.path.join(gif_dir,gif)
     print("gif_path",gif_path)
     ani.save(gif_path, fps=100)
@@ -145,9 +148,10 @@ if __name__ == "__main__":
         data_dict[prefix]["name"] = prefix
     '''
     all_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_all_cam_sorted.pkl"
+    all_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing.pkl"
     all_dataset = load_pkl(all_path)
 
-    for data in all_dataset : 
+    for data in all_dataset :
         video_name = data['video_name']
         prefix = video_name.split('_cam')[0]
         postfix = video_name.split('_cam')[1]
