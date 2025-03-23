@@ -1,4 +1,4 @@
-import os, json, cv2, argparse, pickle
+import os, json, cv2, argparse, pickle, numpy as np, torch
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -6,7 +6,6 @@ from mpl_toolkits.mplot3d import Axes3D
 from moviepy.editor import VideoFileClip
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
-import numpy as np
 from PIL import Image, ImageSequence
 from drawutils.rank_color import skeleton_body_part, joint_graph_coordinate, AlphaPose_to_SMPL, SMPL_to_AlphaPose
 from drawutils.rank_color import SMPL_joints_name, rank_color_list, backbone_color, combinations,AlphaPose_not_draw
@@ -16,6 +15,7 @@ offset = 0.3
 matplotlib.use('Agg')
 
 def load_pkl(file_path):
+    print(file_path)
     with open(file_path, 'rb') as f:
         return pickle.load(f)
 
@@ -26,19 +26,26 @@ def normal_draw(joints_cam, file_name):
     ax.set_ylabel('y axis')
     ax.set_zlabel('z axis')
     
-    cam_list = ["1","2","3","4"]
-    color = ['gold', 'cyan', 'red', 'lime']
-    num_frame_min = 100000
+    cam_list = ["1", "2", "3", "4"]
+    color = ['gold', 'blue', 'red', 'lime']
+    num_frame_min, frame_number= 100000, 0
+    if(len(joints_cam) != 5):
+        # One of the four cameras is dedicated to capturing the name, indicating which athlete 
+        # and which perspective it represents.
+        print("Do not have 4 camera view. The number of camera is ", len(joints_cam) - 1)
     for idx, i in enumerate(cam_list):
-        try:
             num_frame = len(joints_cam[i])
+            if i != "2" and torch.equal(joints_cam[i], joints_cam["2"]):
+                print("The same error joints : i",i)
+            if (idx == 0):
+                frame_number = num_frame
+                print("Correct :",frame_number)
+            else:
+                if (frame_number != num_frame):
+                    print("Error : frame_number",frame_number ,"num_frame",num_frame)
             num_frame_min = min(num_frame_min,num_frame)
             joints_cam[i] = joints_cam[i].reshape(num_frame,22,3)
-            # y z 顛倒
             joints_cam[i][:, :, 1], joints_cam[i][:, :, 2] = -joints_cam[i][:, :, 1], -joints_cam[i][:, :, 2]
-        except:
-            continue
-
     def animate(frame):
         ax.clear()
 
@@ -46,11 +53,9 @@ def normal_draw(joints_cam, file_name):
             try:
                 joints = joints_cam[i]
             except:
+                print("Error joint i",i)
                 continue
             skeleton = joints[frame]
-            ax.set_xlim([joints[0][0][0]-offset, joints[0][0][0]+offset])  # 设置 x 轴范围
-            ax.set_ylim([joints[0][0][1]-offset, joints[0][0][1]+offset])  # 设置 y 轴范围
-            ax.set_zlim([joints[0][0][2]-offset, joints[0][0][2]+offset])   # 设置 z 轴范围
             ax.set_xlabel('x axis')
             ax.set_zlabel('y axis')
             ax.set_ylabel('z axis')
@@ -62,39 +67,34 @@ def normal_draw(joints_cam, file_name):
             skeleton_right_hand = [[9,14],[14,17],[17,19],[19,21]]
             
             for index in skeleton_bone : 
-                first = index[0]
-                second = index[1]
-                ax.plot([skeleton[first][0], skeleton[second][0]] , 
-                        [skeleton[first][1], skeleton[second][1]] ,
-                        [skeleton[first][2], skeleton[second][2]] , color[idx], linewidth=5.0)   # gold
+                first, second = index[0], index[1]
+                ax.plot([skeleton[first][0], skeleton[second][0]], 
+                        [skeleton[first][1], skeleton[second][1]],
+                        [skeleton[first][2], skeleton[second][2]], color[idx], linewidth=1.0)   # gold
             
             for index in skeleton_left_leg : 
-                first = index[0]
-                second = index[1]
-                ax.plot([skeleton[first][0], skeleton[second][0]] , 
-                        [skeleton[first][1], skeleton[second][1]] ,
-                        [skeleton[first][2], skeleton[second][2]] , color[idx], linewidth=5.0)  # cyan
+                first, second = index[0], index[1]
+                ax.plot([skeleton[first][0], skeleton[second][0]], 
+                        [skeleton[first][1], skeleton[second][1]],
+                        [skeleton[first][2], skeleton[second][2]], color[idx], linewidth=1.0)  # cyan
         
             for index in skeleton_right_leg : 
-                first = index[0]
-                second = index[1]
-                ax.plot([skeleton[first][0], skeleton[second][0]] , 
-                        [skeleton[first][1], skeleton[second][1]] ,
-                        [skeleton[first][2], skeleton[second][2]] , color[idx], linewidth=5.0) # fuchsia
+                first, second = index[0], index[1]
+                ax.plot([skeleton[first][0], skeleton[second][0]], 
+                        [skeleton[first][1], skeleton[second][1]],
+                        [skeleton[first][2], skeleton[second][2]], color[idx], linewidth=1.0) # fuchsia
             
             for index in skeleton_left_hand : 
-                first = index[0]
-                second = index[1]
-                ax.plot([skeleton[first][0], skeleton[second][0]] , 
-                        [skeleton[first][1], skeleton[second][1]] ,
-                        [skeleton[first][2], skeleton[second][2]] , color[idx], linewidth=5.0) # lime
+                first, second = index[0], index[1]
+                ax.plot([skeleton[first][0], skeleton[second][0]], 
+                        [skeleton[first][1], skeleton[second][1]],
+                        [skeleton[first][2], skeleton[second][2]], color[idx], linewidth=1.0) # lime
     
             for index in skeleton_right_hand : 
-                first = index[0]
-                second = index[1]
-                ax.plot([skeleton[first][0], skeleton[second][0]] , 
-                        [skeleton[first][1], skeleton[second][1]] ,
-                        [skeleton[first][2], skeleton[second][2]] , color[idx],linewidth=5.0) # red
+                first, second = index[0], index[1]
+                ax.plot([skeleton[first][0], skeleton[second][0]], 
+                        [skeleton[first][1], skeleton[second][1]],
+                        [skeleton[first][2], skeleton[second][2]], color[idx],linewidth=1.0) # red
         
         ax.grid(True)
         ax.xaxis.pane.fill = False
@@ -118,15 +118,14 @@ def normal_draw(joints_cam, file_name):
 # python camera_boxing_read.py
 if __name__ == "__main__":
     # train boxing path 
-    train_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_GT_train_aggregate.pkl"
+    # train_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_GT_train_aggregate.pkl"
     # test boxing path
-    test_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_GT_test_aggregate.pkl"
-    train_dataset = load_pkl(train_path)
-    test_dataset = load_pkl(test_path)
+    # test_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_GT_test_aggregate.pkl"
+    # train_dataset = load_pkl(train_path)
+    # test_dataset = load_pkl(test_path)
 
-    # When running the error segment setting, it is must to check the file name in the attention_node file
-   
     data_dict = {}
+    '''
     for data in train_dataset : 
         video_name = data['video_name']
         prefix = video_name.split('_cam')[0]
@@ -144,6 +143,21 @@ if __name__ == "__main__":
             data_dict[prefix] = {}
         data_dict[prefix][postfix] = data["features"]
         data_dict[prefix]["name"] = prefix
+    '''
+    all_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_all_cam_sorted.pkl"
+    all_dataset = load_pkl(all_path)
 
+    for data in all_dataset : 
+        video_name = data['video_name']
+        prefix = video_name.split('_cam')[0]
+        postfix = video_name.split('_cam')[1]
+        if (postfix != "1" and postfix != "2" and postfix != "3" and postfix != "4"):
+            print("Error",postfix)
+        if prefix not in data_dict:
+            data_dict[prefix] = {}
+        data_dict[prefix][postfix] = data["features"]
+        data_dict[prefix]["name"] = prefix
+        
     for data in data_dict :
         normal_draw(data_dict[data], data_dict[data]["name"])
+        print(data_dict[data]["name"]," finish")
