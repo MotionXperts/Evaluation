@@ -44,7 +44,9 @@ def normal_draw(joints, file_name, gif_dir) :
         ax.set_xlabel('x axis')
         ax.set_zlabel('y axis')
         ax.set_ylabel('z axis')
-
+        ax.set_xlim(-0.4, 0.4)
+        ax.set_ylim(-0.4, 0.4)
+        ax.set_zlim(-0.4, 0.4)
         skeleton_bone = [[15, 12],[12, 9],[9, 6],[6, 3],[3, 0]]
         skeleton_left_leg = [[0, 1],[1, 4],[4, 7],[7, 10]]
         skeleton_right_leg = [[0, 2],[2, 5],[5, 8],[8, 11]]
@@ -105,17 +107,37 @@ def load_pkl(file_path) :
     with open(file_path, 'rb') as f :
         return pickle.load(f)
 
+def normalize(joints):
+    for frame in range(joints.shape[0]) :
+        joints[frame] = joints[frame] - joints[frame][0]
+    return joints
+
+def simple_check_pickle(file_path) :
+    with open(file_path, 'rb') as f :
+        skating = pickle.load(f)
+    print("skating dataset.type", type(skating))
+    for data in skating :
+        print(data.keys())
+        for key in data :
+            print(key, type(data[key]))
+            if key == "features" :
+                print(key, data[key].shape)
+            if key == "video_name" :
+                print(key, data[key])
+        break
+
+def check_pickle(file_path) :
+    with open(file_path, 'rb') as f :
+        data = pickle.load(f)
+    for i in range(len(data)) :
+        features = np.array(data[i]['features'])
+        features.resize((features.shape[0], 22, 3))
+        normal_draw(features, data[i]['video_name'], "./Boxing_new_visualize")
+
 if __name__ == "__main__" :
-    '''
-    test_path = "/home/weihsin/datasets/BoxingDatasetPkl/boxing_test.pkl"
-    test_dataset = load_pkl(test_path)
-    # print its key
-    print(test_dataset[0].keys())
-    boxing_dataset_path = "/home/weihsin/datasets/BoxingDatasetPkl"
-    save_path = os.path.join(boxing_dataset_path, "boxing_2025-03-18.pkl")
-    new_dataset = load_pkl(save_path)
-    print("new_dataset[0]", new_dataset[0].keys())
-    '''
+    # simple_check_pickle(save_path)
+    # check_pickle(save_path)
+
     data_dict = []
     boxing_dataset_path = "/home/weihsin/datasets/BoxingDatasetPkl"
     dir_path = os.path.join(boxing_dataset_path, "boxing_2025-03-18_results")
@@ -123,7 +145,7 @@ if __name__ == "__main__" :
     for folder_num in range(0, 36) :
         folder_name = f"{folder_num:06d}"
         keypoints_dir = os.path.join(dir_path, folder_name, "smpl")
-        
+            
         if not os.path.isdir(keypoints_dir) :
             print(f"Skipping missing folder : {keypoints_dir}")
             continue
@@ -142,8 +164,13 @@ if __name__ == "__main__" :
             joints_list.append(keypoints)
 
         joints = np.array(joints_list)  # shape : (num_frames, 22, 3)
-        
-        data = {"features" : joints.tolist(),
+            
+        # Change to the shape (num_frames, 22, 3) to (num_frames, 66)
+        joints = joints[:, :22, :]
+        length = joints.shape[0]
+        joints = joints.reshape(length, -1)
+
+        data = {"features" : joints,
                 "video_name" : folder_name}
 
         data_dict.append(data)
@@ -153,4 +180,3 @@ if __name__ == "__main__" :
     with open(save_path, "wb") as f :
         pickle.dump(data_dict, f)
     print(f"Data saved to {save_path}")
-    
